@@ -21,7 +21,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        pressStart: ['"Press Start 2P"'],
+        mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
       },
       keyframes: {
         "accordion-down": {
