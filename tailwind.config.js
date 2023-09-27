@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-
-const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
-  darkMode: ["class"],
+  // darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -20,9 +17,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        mono: ['"IBM Plex Mono"', ...defaultTheme.fontFamily.mono],
-      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
@@ -36,6 +30,13 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      fontFamily: {
+        // sans: ["Inter", "sans-serif"],
+        sans: ["Source Sans Pro", "sans-serif"],
+        serif: ["EB Garamond", "serif"],
+        // serif: ["Alegreya", "serif"],
+        // serif: ["Playfair Display", "serif"],
       },
     },
   },

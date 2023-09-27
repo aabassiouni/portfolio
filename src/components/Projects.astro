@@ -1,0 +1,132 @@
+---
+import { ExternalLinkIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./ui/card";
+import { Image } from 'astro:assets';
+import sideprojectImg from '../assets/sideproject.png';
+import frameboundImg from '../assets/framebound.png';
+import extensionImg from '../assets/extension.png';
+import listeninImg from  '../assets/listenin.png';
+
+---
+
+<div>
+	<h1 class="text-white text-center w-full font-serif text-3xl pb-5">Projects</h1>
+	<div class="space-y-4">
+		<Card className="">
+			<CardHeader>
+				<CardTitle className="font-serif">SideprojectAI</CardTitle>
+				{/* <CardDescription>Card Description</CardDescription> */}
+				</CardHeader>
+			<CardContent className="flex flex-wrap sm:flex-nowrap items-center gap-6 ">
+				<div class="sm:basis-1/2 space-y-5">
+					<p>
+						SideprojectAI is a platform that lets you easily generate resume sections for any GitHub
+						repository using AI. Try it out now at {""}
+						<a class="inline-flex items-center underline underline-offset-4 gap-1" href="">
+								usesideprojectai.com! <ExternalLinkIcon />
+						</a>
+					</p>
+					<p>
+						Technologies used: Next.js, React.js, Typescript, TailwindCSS, Langchain, MySQL,
+						Node.js, Serverless Functions.{" "}
+					</p>
+				</div>
+				<Image alt="" class="basis-1/2 h-52 rounded-xl " src={sideprojectImg} ></Image>
+			</CardContent>
+			<CardFooter>
+				<a class="font-source inline-flex items-center gap-1" href="https://usesideprojectai.com/">
+					<p>Visit Website</p> <ExternalLinkIcon />
+				</a>
+			</CardFooter>
+		</Card>
+		<Card className="">
+			<CardHeader>
+				<CardTitle>Next.js App Router Component Helper</CardTitle>
+			</CardHeader>
+			<CardContent className="flex flex-wrap sm:flex-nowrap items-center gap-6 ">
+				<div class="sm:basis-1/2 space-y-5">
+					<p>
+						Next.js App Router Component Helper is a VSCode extension designed to help Next.js
+						developers easily recognize whether a component runs on the server or the client. The
+						extension is open source and has been downloaded over 150 times.
+					</p>
+					<p>Technologies used: Next.js, Typescript, Babel, VSCode API . </p>
+				</div>
+				<Image alt="" class="sm:basis-1/2 w-full h-52 rounded-xl object-contain bg-zinc-900 p-10" src={extensionImg} ></Image>
+			</CardContent>
+			<CardFooter className="gap-3">
+				<a
+					class="inline-flex items-center gap-1"
+					href="https://github.com/aabassiouni/next-js-app-router-helper"
+				>
+					<p>View on GitHub</p> <GitHubLogoIcon />
+				</a>
+				<a
+					class="inline-flex items-center gap-1"
+					href="https://marketplace.visualstudio.com/items?itemName=aabassiouni.next-js-app-router-helper"
+				>
+					<p>View on VSCode Marketplace</p> <ExternalLinkIcon />
+				</a>
+			</CardFooter>
+		</Card>
+		<Card className="">
+			<CardHeader>
+				<CardTitle>Framebound</CardTitle>
+			</CardHeader>
+			<CardContent className="flex flex-wrap sm:flex-nowrap items-center gap-6 ">
+				<div class="sm:basis-1/2 space-y-5">
+					<p>
+						Framebound is a fully custom fullstack ecommerce website built to sell prints of my
+						street photography.
+					</p>
+					<p>
+						Technologies used: Next.js, React.js, TailwindCSS, PostgreSQL, Node.js, Serverless
+						Functions, Stripe.{" "}
+					</p>
+				</div>
+				<Image alt="" class="basis-1/2 h-52 rounded-xl " src={frameboundImg} ></Image>
+
+			</CardContent>
+			<CardFooter className="gap-3">
+				<a
+					class="inline-flex items-center gap-1"
+					href="https://github.com/aabassiouni/framebound"
+				>
+					<p>View on GitHub</p> <GitHubLogoIcon />
+				</a>
+				<a class="inline-flex items-center gap-1" href="https://framebound.vercel.app/">
+					<p>Visit website</p> <ExternalLinkIcon />
+				</a>
+			</CardFooter>
+		</Card>
+		<Card className="">
+			<CardHeader>
+				<CardTitle>Listenin</CardTitle>
+			</CardHeader>
+			<CardContent className="flex flex-wrap sm:flex-nowrap items-center gap-6 ">
+				<div class="sm:basis-1/2 space-y-5">
+					<p>
+						Listenin is a music-based social chat platform that lets you share your favorite music with your friends on Spotify.
+					</p>
+					<p>
+						Technologies used: React.js, TailwindCSS, MongoDB Atlas, Node.js, Express.js, Spotify API, Firebase.{" "}
+					</p>
+				</div>
+				<Image alt="" class="basis-1/2 h-52 rounded-xl " src={listeninImg} ></Image>
+
+			</CardContent>
+			<CardFooter className="gap-3">
+				<a
+					class="inline-flex items-center gap-1"
+					href="https://github.com/aabassiouni/listenin"
+				>
+					<p>View on GitHub</p> <GitHubLogoIcon />
+				</a>
+				<a class="inline-flex items-center gap-1" href="https://listenin.vercel.app/">
+					<p>Visit website</p> <ExternalLinkIcon />
+				</a>
+			</CardFooter>
+		</Card>
+	</div>
+</div>
+
