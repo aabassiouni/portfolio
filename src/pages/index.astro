@@ -2,17 +2,29 @@
 import "@/styles/globals.css";
 
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import { Button } from "../components/ui/button";
+// import Card from "../components/Card.astro";
+// import { Button } from "../components/ui/button";
 import GithubIcon from "../components/icons/GithubIcon";
-import {Separator} from "../components/ui/separator";
-import Navbar from "@/components/Navbar";
-import Main from "@/components/Main";
+// import {Separator} from "../components/ui/separator";
+import Navbar from "@/components/Navbar.astro";
+import Main from "@/components/Main.astro";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import Projects from "@/components/Projects.astro";
+import Footer from "@/components/Footer.astro"
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="flex flex-col h-screen bg-blue-950">
+<Layout title="Ali Bassiouni">
+	<main class="flex flex-col min-h-screen bg-zinc-900 p-4 sm:px-96">
 		<Navbar />
 		<Main />
+		<Projects />
+		<Footer />
 	</main>
 </Layout>
