@@ -32,7 +32,7 @@ if (!previewImg) {
 			<slot name="description" />
 			<slot name="technologies" />
 		</div>
-		<a class="sm:basis-1/2 h-52 rounded-xl" href={`/${project}`}>
+		<a class="sm:basis-1/2 h-52 rounded-xl overflow-hidden" href={`/${project}`}>
 			<Image transition:name={`${project}-image`} alt="" class="rounded-xl" src={previewImg()} />
 		</a>
 	</CardContent>
