@@ -2,38 +2,29 @@
 export interface Props {
 	title: string;
 }
+import "@/styles/globals.css";
 
+import "@fontsource/source-sans-pro/200-italic.css";
+import "@fontsource/source-sans-pro/300-italic.css";
+import "@fontsource/source-sans-pro/400.css";
+import "@fontsource/source-sans-pro/600-italic.css";
+import "@fontsource/source-sans-pro/700-italic.css";
+import "@fontsource/source-sans-pro/900-italic.css";
 
-import '@fontsource/source-sans-pro/200-italic.css';
-import '@fontsource/source-sans-pro/300-italic.css';
-import '@fontsource/source-sans-pro/400.css';
-import '@fontsource/source-sans-pro/600-italic.css';
-import '@fontsource/source-sans-pro/700-italic.css';
-import '@fontsource/source-sans-pro/900-italic.css';
-
-
-import '@fontsource/eb-garamond/400.css';
-import '@fontsource/eb-garamond/500.css';
-import '@fontsource/eb-garamond/600.css';
-import '@fontsource/eb-garamond/700.css';
-import '@fontsource/eb-garamond/800.css';
-
-const { title } = Astro.props;
-
+import "@fontsource/eb-garamond/400.css";
+import "@fontsource/eb-garamond/500.css";
+import "@fontsource/eb-garamond/600.css";
+import "@fontsource/eb-garamond/700.css";
+import "@fontsource/eb-garamond/800.css";
+import CommonHead from "../components/CommonHead.astro";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<!-- <meta name="description" content=""> -->
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<CommonHead />
 	</head>
 	<body>
 		<slot />
 	</body>
-</html >
-
+</html>

@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import { Image } from "astro:assets";
+import ImageCarousel from "@/components/ImageCarousel";
+
+export const prerender = false;
+
+export function getStaticPaths() {
+	return [
+		{ params: { project: "sideprojectai" } },
+		{ params: { project: "extension" } },
+		{ params: { project: "framebound" } },
+		{ params: { project: "listenin" } },
+	];
+}
+const titles: Record<string, string> = {
+	sideprojectai: "SideprojectAI",
+	extension: "Next.js App Router Conponent Helper",
+	framebound: "Framebound",
+	listenin: "ListenIn",
+};
+
+const { project } = Astro.params;
+const allImages = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
+
+let projectImages: Record<
+	string,
+	() => Promise<{
+		default: ImageMetadata;
+	}>
+> = {};
+
+for (let key in allImages) {
+	if (key.includes(project!)) {
+		projectImages[key] = allImages[key];
+	}
+}
+
+console.log(projectImages);
+// if (!sideprojectImages[]) throw new Error(`"${'./assets/sideproject.png'}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+---
+
+<Layout title="Ali Bassiouni">
+	<main class="flex flex-col gap-4 min-h-screen bg-zinc-900 p-4 md:px-96">
+		<Navbar />
+		<p
+			transition:name={`${project}-title`}
+			class="text-white mx-auto text-2xl font-serif font-semibold leading-none tracking-tight"
+		>
+			{titles[project]}
+		</p>
+		<ImageCarousel client:load>
+			{
+				Object.values(projectImages).map((image, index) => {
+					if (index === 0) {
+						return <Image loading={"eager"} transition:name={`${project}-image`} alt="" src={image()} />;
+					}
+					return <Image loading={"eager"} alt="" src={image()} />;
+				})
+			}
+		</ImageCarousel>
+	</main>
+</Layout>
