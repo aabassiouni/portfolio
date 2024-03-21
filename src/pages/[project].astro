@@ -12,6 +12,7 @@ export function getStaticPaths() {
 		{ params: { project: "extension" } },
 		{ params: { project: "framebound" } },
 		{ params: { project: "listenin" } },
+		{ params: { project: "entrybase" } },
 	];
 }
 const titles: Record<string, string> = {
@@ -19,6 +20,7 @@ const titles: Record<string, string> = {
 	extension: "Next.js App Router Conponent Helper",
 	framebound: "Framebound",
 	listenin: "ListenIn",
+	entrybase: "Entrybase",
 };
 
 const { project } = Astro.params;

@@ -6,6 +6,46 @@ import ProjectCard from "./ProjectCard.astro";
 <div>
 	<h1 class="text-white text-center w-full font-serif text-3xl pb-5">Projects</h1>
 	<div class="space-y-4">
+		<ProjectCard project="entrybase">
+			<p
+				slot="title"
+				transition:name={`entrybase-title`}
+				class="text-white text-2xl font-serif font-semibold leading-none tracking-tight"
+			>
+				Entrybase
+			</p>
+			<p slot="description">
+				Entrybase is an open source waitlist managment and analytics platform that allows you to launch your
+				website or Saas product with a waitlist easily and quickly. Entrybase handles signups, invites and
+				analytics and offers a public API to allow for easy integration. Try it out now at {""}
+				<a
+					target="_blank"
+					href="https://entrybase.app/"
+					class="inline-flex items-center underline underline-offset-4 gap-1"
+					href=""
+				>
+					entrybase.app! <ExternalLinkIcon />
+				</a>
+			</p>
+			<p slot="technologies">
+				Technologies used: Next.js, React.js, Typescript, TailwindCSS, Cloudflare Workers, PostgreSQL, Node.js,
+				Serverless Functions.{" "}
+			</p>
+			<Fragment slot="links">
+				<a
+					target="_blank"
+					class="inline-flex items-center gap-1"
+					href="https://github.com/aabassiouni/entrybase"
+				>
+					<p>View on GitHub</p>
+					<GitHubLogoIcon />
+				</a>
+				<a target="_blank" class="inline-flex items-center gap-1" href="https://entrybase.app/">
+					<p>Visit Website</p>
+					<ExternalLinkIcon />
+				</a>
+			</Fragment>
+		</ProjectCard>
 		<ProjectCard project="sideprojectai">
 			<p
 				slot="title"
